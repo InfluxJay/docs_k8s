@@ -111,6 +111,17 @@ kustomize build ./directory
 kustomize build ./directory | kubectl -f -
 ```
 
+#### Clustered troubleshooting commands
+
+```shell
+kubectl -A get appinstance -o json > appinstance.json
+```
+
+```shell
+kubectl cluster-info dump --namespaces influxdb --output-directory /tmp/influxdb-out
+```
+
+
 
 
 
